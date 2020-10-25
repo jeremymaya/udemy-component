@@ -12,7 +12,7 @@ Deployed App: <https://jeremymaya.github.io/udemy-react-components>
 
 This is a follow along project from [Modern React with Redux by Stephen Grider](https://www.udemy.com/course/react-redux/).
 
-This project goes over a topic of communicating with Props. It specifically goes over three tenets of component:
+This project goes over the topic of communicating with Props. It specifically goes over three tenets of component:
 
 * Component Nesting - A component can be shown inside of another
 * Component Reusability - We want to make components that can be easily reused throughout application
