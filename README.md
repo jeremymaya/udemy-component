@@ -46,7 +46,7 @@ Install the dependencies:
 npm i
 ```
 
-## Development Mode
+### Development Mode
 
 In the project directory, run:
 
