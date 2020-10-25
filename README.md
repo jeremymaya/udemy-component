@@ -66,9 +66,9 @@ You will also see any lint errors in the console.
 
 ### Three Tenets of Components
 
-Component Nesting - A component can be shown inside of another
-Component Reusability - We want to make components that can be easily reused throughout application
-Component Configuration - We should be able to configure a component when it is created
+* Component Nesting - A component can be shown inside of another
+* Component Reusability - We want to make components that can be easily reused throughout application
+* Component Configuration - We should be able to configure a component when it is created
 
 ### Getting Some Free Styling
 
