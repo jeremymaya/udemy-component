@@ -1,8 +1,10 @@
 # udemy-components
 
+![Action Status](https://github.com/jeremymaya/udemy-react-components/workflows/build/badge.svg)
+
 Author: Kyungrae Kim
 
-Deployed App: <>
+Deployed App: <https://jeremymaya.github.io/udemy-react-components>
 
 ---
 
@@ -26,6 +28,7 @@ This application uses the following dependencies:
 * ReactDOM
 * [Faker.js](https://github.com/marak/Faker.js/)
 * [Semantic UI](https://semantic-ui.com/)
+* GitHub Pages
 
 ---
 
@@ -157,3 +160,4 @@ The custom children prop can be shown by accessing `props.children`.
 * [Modern React with Redux by Stephen Grider](https://www.udemy.com/course/react-redux/)
 * [Faker.js](https://github.com/marak/Faker.js/)
 * [Semantic UI](https://semantic-ui.com/)
+* [Dev - Setting up a CI/CD workflow on GitHub Actions for a React App (with GitHub Pages and Codecov)](https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp)
