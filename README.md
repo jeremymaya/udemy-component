@@ -1,70 +1,159 @@
-# udemy-component
+# udemy-components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Author: Kyungrae Kim
 
-## Available Scripts
+Deployed App: <>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.<br />
+This is a follow along project from [Modern React with Redux by Stephen Grider](https://www.udemy.com/course/react-redux/).
+
+This project goes over a topic of communicating with Props. It specifically goes over three tenets of component:
+
+* Component Nesting - A component can be shown inside of another
+* Component Reusability - We want to make components that can be easily reused throughout application
+* Component Configuration - We should be able to configure a component when it is created
+
+---
+
+## Architecture
+
+This application uses the following dependencies:
+
+* React
+* ReactDOM
+* [Faker.js](https://github.com/marak/Faker.js/)
+* [Semantic UI](https://semantic-ui.com/)
+
+---
+
+## Getting Started
+
+Clone this repository to your local machine:
+
+```bash
+https://github.com/jeremymaya/code-301-lab-06.git
+```
+
+Install the dependencies:
+
+```bash
+npm i
+```
+
+## Development Mode
+
+In the project directory, run:
+
+```bash
+npm start
+```
+
+The above command runs the app in the development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.  
 You will also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Notes from the Course Section
 
-### `npm run build`
+### Three Tenets of Components
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Component Nesting - A component can be shown inside of another
+Component Reusability - We want to make components that can be easily reused throughout application
+Component Configuration - We should be able to configure a component when it is created
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Getting Some Free Styling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Semantic UI](https://semantic-ui.com/) is an open source CSS framework/library that provides free default styling for a project.
 
-### `npm run eject`
+Semantic UI can be implemented by following its documentation. Another way to utilize the framework is to simply import it into the project using CDN link.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For this course, we are using <https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css>.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Specifying Images in JSX
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Faker.js](https://github.com/marak/Faker.js/) is a open source library that automatically generates fake data for testing/demo purpose.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Add faker.js library to a project by running the following command:
 
-## Learn More
+```bash
+npm install --save faker
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Extracting JSX to New Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Creating a Reusable, Configurable Component
 
-### Code Splitting
+1. Identify the JSX that appears to be duplicated
+2. What is the purpose of that block of JSX? Think of a descriptive name for what it does
+3. Create a new file to house this new component - it should have the same name as the component
+4. Create a new component in the new file, paste the JSX into it
+5. Make the new component configurable by using React's 'props' system
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+`CommentDetail.js` React components are written in with upper cases
 
-### Analyzing the Bundle Size
+### Component Nesting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Once a React component has been extracted, it needs to be exported then imported to the index.js through **Component Nesting**:
 
-### Making a Progressive Web App
+Example of an export statement:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```javascript
+export default CommentDetail
+```
 
-### Advanced Configuration
+Example of an import statement:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```javascript
+import CommentDetail from './CommentDetail';
+```
 
-### Deployment
+Components are referenced as if they are a JSX tag (eg. `<CommentDetail />`) instead of a Javascript variable (eg. `{ CommentDetail }`).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### React's Props System
 
-### `npm run build` fails to minify
+Props
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* System for passing data from a **parent** component to a **child** component
+* Goal is to customize or configure a child component
+
+It is used to customize how the child component looks and behaves
+
+### Passing and Receiving Props
+
+Props == Properties
+
+Child components cannot pass data back to the parent component.
+
+There are two stage to the Props system
+
+1. Provide information from parent to child
+2. The child component consumes/uses the information
+
+Providing props from parents to child
+
+```javascript
+<CommentDetail author="Sam" />
+
+// author:  Name of the prop
+// "Sam":   Value of the prop
+```
+
+In the corresponding React component, the provided information can be accessed through the `props` object.
+
+### Showing Custom Children
+
+The custom children prop can be shown by accessing `props.children`.
+
+---
+
+## Credits
+
+* [Modern React with Redux by Stephen Grider](https://www.udemy.com/course/react-redux/)
+* [Faker.js](https://github.com/marak/Faker.js/)
+* [Semantic UI](https://semantic-ui.com/)
