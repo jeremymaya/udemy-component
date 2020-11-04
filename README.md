@@ -37,13 +37,13 @@ This application uses the following dependencies:
 Clone this repository to your local machine:
 
 ```bash
-https://github.com/jeremymaya/code-301-lab-06.git
+https://github.com/jeremymaya/udemy-react-components.git
 ```
 
 Install the dependencies:
 
 ```bash
-npm i
+npm install
 ```
 
 ### Development Mode
